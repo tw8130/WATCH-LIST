@@ -1,0 +1,1 @@
+MOVIE_API_KEY = '<https://developers.themoviedb.org/3>'
