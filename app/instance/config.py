@@ -1,1 +1,1 @@
-MOVIE_API_KEY = '<https://developers.themoviedb.org/3>'
+MOVIE_API_KEY = '<49292d749564e5bcc0053e5e028fc46c>'
