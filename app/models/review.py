@@ -29,3 +29,17 @@ class Review:
         clears all the items from list
         '''
         Review.all_reviews.clear()
+    
+    @classmethod
+    def get_reviews(cls,id):
+        '''
+        method that displays all the reviews for a particular movie
+        '''
+
+        response = []
+
+        for review in cls.all_reviews:
+            if review.movie_id == id:
+                response.append(review)
+
+        return response
