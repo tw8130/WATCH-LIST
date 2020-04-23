@@ -1,3 +1,7 @@
+import unittest
+from models import review
+Review = review.Review
+
 class TestReview(unittest.TestCase):
 
     def setUp(self):
