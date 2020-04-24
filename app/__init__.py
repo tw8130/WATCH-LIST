@@ -1,6 +1,7 @@
 from flask import Flask
 from .config import DevConfig 
 from flask_bootstrap import Bootstrap
+from flask_wtf.csrf import CSRFProtect
 
 
 # Initializing application
@@ -10,7 +11,9 @@ app = Flask(__name__,instance_relative_config = True)
 # Setting up configuration
 app.config.from_object(DevConfig)
 app.config.from_pyfile('config.py')
-
+app.config['SECRET_KEY'] = "secretkey"
+app.config['WTF_CSRF_SECRET_KEY'] = "secretkey"
+csrf = CSRFProtect(app)
 
 # Initializing Flask Extensions
 bootstrap = Bootstrap(app)
